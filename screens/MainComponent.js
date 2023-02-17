@@ -40,15 +40,6 @@ const Main = () => {
         paddingTop: Platform.OS === "ios" ? 0 : Constants.statusBarHeight,
       }}
     >
-      {/* <DirectoryScreen
-        campsites={campsites}
-        onPress={(campsiteId) => setSelectedCampsiteId(campsiteId)}
-      />
-      <CampsiteInfoScreen
-        campsite={
-          campsites.filter((campsite) => campsite.id === selectedCampsiteId)[0]
-        }
-      /> */}
       <DirectoryNavigator />
     </View>
   );
