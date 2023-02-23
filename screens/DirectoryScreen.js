@@ -10,7 +10,6 @@ const DirectoryScreen = ({ navigation }) => {
   if (campsites.isLoading) {
     return <Loading />;
   }
-
   if (campsites.errMess) {
     return (
       <View>
@@ -22,7 +21,7 @@ const DirectoryScreen = ({ navigation }) => {
   const renderDirectoryItem = ({ item: campsite }) => {
     return (
       <Tile
-        title={campsites.name}
+        title={campsite.name}
         caption={campsite.description}
         featured
         onPress={() => navigation.navigate("CampsiteInfo", { campsite })}
@@ -30,7 +29,6 @@ const DirectoryScreen = ({ navigation }) => {
       />
     );
   };
-
   return (
     <FlatList
       data={campsites.campsitesArray}
